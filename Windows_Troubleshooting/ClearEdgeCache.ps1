@@ -1,7 +1,7 @@
 ﻿
 $edgeApplication = "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 $edgeCachePath  = "$env:LOCALAPPDATA\Microsoft\Edge\User Data\Default\Cache\Cache_Data"
-$edgeProcess = (Get-Process -Name msedge).ProcessName
+$edgeProcess = msedge
 $adminLog = "$env:USERPROFILE\Admin_Logs"
 $cacheRemovedLog = Join-Path $adminLog "cleared_cache.log" 
 $date = Get-Date

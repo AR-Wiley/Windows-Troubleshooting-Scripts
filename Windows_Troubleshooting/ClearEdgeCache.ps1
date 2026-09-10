@@ -21,10 +21,10 @@ function Validate-Cache-Path {
         Write-Host "Edge Cache path does not exist"
         return
     } 
-
 }
 
 function Validate-Log-Path {
+    
     if(-not(Test-Path $adminLog)){
         try
         {
@@ -35,8 +35,7 @@ function Validate-Log-Path {
         catch
         {
             Write-Output "An error has occured: $_"
-        }
-    
+        }    
     }
 }
 
@@ -54,7 +53,6 @@ function Kill-Edge-Process {
             Write-Host "An error has occured $_"
         }
     }
-
 }
 
 function Clear-Edge-Cache {
@@ -70,9 +68,7 @@ function Clear-Edge-Cache {
         {
             Write-Host "An error has occured $_"
             "$date - An error has occured $_" | Out-File -FilePath $cacheRemovedLog -Append
-        }
-        
-        
+        }                
  }
     
 
